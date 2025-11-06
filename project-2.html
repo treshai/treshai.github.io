@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TreShai Hubbard: UX Student</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="work.css">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="work-page">
+  <!-- NAV -->
+  <header>
+    <nav class="nav">
+      <div class="logo-section">
+        <img src="TH logo.png" alt="TreShai Hubbard Logo" class="logo" />
+        <span class="website-name">TreShai Hubbard - Portfolio</span>
+      </div>
+      <ul class="nav-ul">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume-cv.html">Resume</a></li>
+        <li><a href="my-work.html">My Work</a></li>
+      </ul>
+    </nav>
+  </header>
+  <style>
+    :root{
+      --accent: #2b8a6e;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{ margin:0; padding:32px; background:#fffaf7; color:#08101a; }
+    .wrap{ max-width:900px; margin:0 auto; }
+    a.back{ display:inline-block; margin-bottom:18px; color:var(--accent); text-decoration:none; font-weight:600; }
+    h1{ margin:6px 0 12px 0; font-size:1.6rem; }
+    .meta{ color:var(--muted); margin-bottom:20px; }
+    .hero{
+      background:linear-gradient(90deg, rgba(43,138,110,0.15), rgba(43,138,110,0.05));
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.04);
+      margin-bottom:20px;
+    }
+    section{ margin-bottom:22px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 280px;
+      gap:18px;
+    }
+    @media (max-width:800px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="wrap">
+    <a class="back" href="my-work.html" aria-label="Back to my work">← Back to My Work</a>
+    <h1>Digital Asset Library</h1>
+    <p class="meta">Accessibility, Information Architecture • 2025 • Role: Information Architect & Digital Asset Organizer</p>
+
+    <div class="hero grid" role="region" aria-label="Project overview">
+      <div>
+        <h2>Overview</h2>
+        <p>Over the course of my second summer internship, I had the opportunity to build a digital asset library. For this project, I am organizing and consolidating digital assets from five teams into a centralized sharepoint library using information architecture principles.</p>
+      </div>
+      <aside>
+        <h3>Quick facts</h3>
+        <ul>
+          <li>Duration: TBD</li>
+          <li>Team: Solo</li>
+          <li>Skills & Tools: Information Architecture, Digital Asset Management, Sharepoint, Power Automate</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section>
+      <h2>Process</h2>
+      <p>I began by designing a clear folder structure for the digital asset library. I reach out to each team to collect their assets, then organize and rename the files according to the agreed-upon structure and conventions.</p><br>
+      <p>This process is ongoing, collecting new assets, organizing them, renaming them, and adding them to the library until all resources are consolidated. The final step will be compiling everything into a searchable SharePoint catalog to ensure all assets are easily accessible for the teams.</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>The project is currently in progress. So far, the library provides a more organized and accessible system for teams, and early adoption has shown that they can more easily locate and use assets. Once complete, the library and catalog will serve as a centralized, scalable resource for all teams.</p>
+    </section>
+
+  </div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="TH logo.png" alt="TreShai Hubbard Logo" class="footer-logo">
+        <p>TreShai Hubbard - Portfolio</p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume-cv.html">Resume</a></li>
+          <li><a href="my-work.html">My Work</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/treshai-hubbard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:hubba209@msu.edu"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© 2025 TreShai Hubbard</p>
+        <p><a href="mailto:hubba209@msu.edu">hubba209@msu.edu</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TreShai Hubbard: UX Student</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="work.css">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="work-page">
+  <!-- NAV -->
+  <header>
+    <nav class="nav">
+      <div class="logo-section">
+        <img src="TH logo.png" alt="TreShai Hubbard Logo" class="logo" />
+        <span class="website-name">TreShai Hubbard - Portfolio</span>
+      </div>
+      <ul class="nav-ul">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume-cv.html">Resume</a></li>
+        <li><a href="my-work.html">My Work</a></li>
+      </ul>
+    </nav>
+  </header>
+  <style>
+    :root{
+      --accent: #2b8a6e;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{ margin:0; padding:32px; background:#fffaf7; color:#08101a; }
+    .wrap{ max-width:900px; margin:0 auto; }
+    a.back{ display:inline-block; margin-bottom:18px; color:var(--accent); text-decoration:none; font-weight:600; }
+    h1{ margin:6px 0 12px 0; font-size:1.6rem; }
+    .meta{ color:var(--muted); margin-bottom:20px; }
+    .hero{
+      background:linear-gradient(90deg, rgba(43,138,110,0.15), rgba(43,138,110,0.05));
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.04);
+      margin-bottom:20px;
+    }
+    section{ margin-bottom:22px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 280px;
+      gap:18px;
+    }
+    @media (max-width:800px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="wrap">
+    <a class="back" href="my-work.html" aria-label="Back to my work">← Back to My Work</a>
+    <h1>Digital Accessibility Guidelines</h1>
+    <p class="meta">Accessibility, Technical Writing • 2024 • Role: Author</p>
+
+    <div class="hero grid" role="region" aria-label="Project overview">
+      <div>
+        <h2>Overview</h2>
+        <p>Over the course of my first summer internship, I had the opportunity to conduct accessibility reviews and create resources to help the team stay better informed about accessibility guideliines, one of the resources being a digital accessibility guidelines document.</p>
+      </div>
+      <aside>
+        <h3>Quick facts</h3>
+        <ul>
+          <li>Duration: 6 weeks</li>
+          <li>Team: Solo</li>
+          <li>Skills & Tools: Adobe Illustrator, Zotero, Microsoft Word</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section>
+      <h2>Process</h2>
+      <p>Our office identified a need to enhance the accessibility of our digital communications and resources to ensure they were inclusive and usable for a diverse audience. This meant addressing barriers that might prevent individuals with disabilities from accessing information effectively.</p><br>
+      <p>To support this initiative, I was tasked with developing a comprehensive master document outlining accessibility guidelines for general communications, digital platforms, and social media. The goal was to create a centralized resource that would guide the team in producing accessible and inclusive materials across all channels. These guidelines were designed to strengthen the accessibility of companywide communications, educational platforms, and internal resources while aligning with best practices and compliance standards.</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>The finalized accessibility guide was shared across the office and became the primary reference for creating accessible content within the office. Team members began incorporating the guidelines into digital communications, social media posts, and educational materials, resulting in more consistent and inclusive practices across platforms. This project helped establish a stronger foundation for accessibility awareness and compliance within the organization.</p>
+    </section>
+
+  </div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="TH logo.png" alt="TreShai Hubbard Logo" class="footer-logo">
+        <p>TreShai Hubbard - Portfolio</p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume-cv.html">Resume</a></li>
+          <li><a href="my-work.html">My Work</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/treshai-hubbard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:hubba209@msu.edu"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© 2025 TreShai Hubbard</p>
+        <p><a href="mailto:hubba209@msu.edu">hubba209@msu.edu</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

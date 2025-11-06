@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.body{
+    background-color: #F0F4F0;
 }
 .logo-section {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
-  
+
   .logo {
     height: 52px;
   }
@@ -51,34 +53,13 @@
     background-color: rgb(100, 141, 124);
     color: white; /* Optional: makes text easier to read */
 }
-.body {
-    margin: 0;
-    font-family: "Albert Sans", sans-serif;
-}
-.headshot h2 {
-    font-family: "Aleo", serif;
-    font-size: 48px;
-    font-weight: 300;
-}
-.headshot {
-    padding: 8rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+.content {
+    margin-top: 90px; /* adjust to nav height */
+    text-align: center;
   }
-  
-  .headshot-block {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
-  .short-info {
-    max-width: 500px;
-  }
-  .about-button {
-    background-color: #85bda6ff;
-    color: black;
+  .download-button {
+    background-color: #2f4b26ff;
+    color: white;
     font-family: 'Albert Sans', sans-serif;
     padding: 0.75rem 2rem;
     border: none;
@@ -88,12 +69,18 @@
     display: inline-block;
     transition: background-color 0.3s ease;
   }
-  
-  .about-button:hover {
-    background-color: rgb(100, 141, 124);
-    color: white;
-  }
-  .footer {
+.h1{
+    font-family: "Aleo", serif;
+    font-size: 34px;
+    font-weight: bold; 
+    color: #2f4b26ff;
+}
+.h2{
+    font-family: "Aleo", serif;
+    font-size: 20px;
+    font-weight: 300;   
+}
+.footer {
     background-color: black;
     color: #FFFFFF;
     padding: 2rem 1rem;
@@ -151,3 +138,4 @@
   .footer-right a:hover {
     text-decoration: underline;
   }
+  
