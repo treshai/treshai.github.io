@@ -9,6 +9,9 @@
     align-items: center;
     gap: 1rem;
   }
+.body{
+  background-color: #F0F4F0;
+}
 
   .logo {
     height: 52px;

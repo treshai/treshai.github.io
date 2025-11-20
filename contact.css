@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.body{
-  background-color: #F0F4F0;
+.body {
+    margin: 0;
+    font-family: "Albert Sans", sans-serif;
+    background-color: #F0F4F0;
+    padding-top: 120px;
 }
 .logo-section {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
-
+  
   .logo {
     height: 52px;
   }
@@ -53,35 +57,70 @@
     background-color: rgb(100, 141, 124);
     color: white; /* Optional: makes text easier to read */
 }
-
-.content {
-    margin-top: 90px; /* adjust to nav height */
+h2{
     text-align: center;
-  }
-  .download-button {
-    background-color: #2f4b26ff;
+    font-family: "Aleo", serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Hover + focus states */
+form input:focus,
+form textarea:focus {
+    border-color: #648d7c;
+    outline: none;
+
+}
+
+/* Textarea size */
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ---- SUBMIT BUTTON ---- */
+form button {
+    padding: 0.9rem 1rem;
+    background: #648d7c; /* your navbar accent */
     color: white;
-    font-family: 'Albert Sans', sans-serif;
-    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-.h1{
-    font-family: "Aleo", serif;
-    font-size: 34px;
-    font-weight: bold; 
-    color: #2f4b26ff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
-.h2{
-    font-family: "Aleo", serif;
-    font-size: 20px;
-    font-weight: 300;   
+
+form button:hover {
+    background: #4f6f61;
 }
-.footer {
+
+form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    font-family: "Albert Sans", sans-serif;
+    margin-bottom: -0.5rem; /* pulls label closer to input */
+}
+@keyframes scroll-up {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }  
+  .footer {
     background-color: black;
     color: #FFFFFF;
     padding: 2rem 1rem;

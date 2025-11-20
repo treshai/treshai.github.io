@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TreShai Hubbard: UX Student</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="work.css">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="work-page">
+  <!-- NAV -->
+  <header>
+    <nav class ="nav">
+      <div class="logo-section">
+          <img src="TH logo.png" alt="TreShai Hubbard Logo" class="logo" />
+          <span class="website-name">TreShai Hubbard - Portfolio</span>
+      </div>
+      <ul class = "nav-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume-cv.html">Resume</a></li>
+          <li><a href="my-work.html">My Work</a></li>
+          <li><a href = contact.html>Contact</a></li>
+      </ul>
+  </nav>
+  </header>
+  <style>
+    :root{
+      --accent: #2b8a6e;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{ margin:0; padding:32px; background:#fffaf7; color:#08101a; }
+    .wrap{ max-width:900px; margin:0 auto; }
+    a.back{ display:inline-block; margin-bottom:18px; color:var(--accent); text-decoration:none; font-weight:600; }
+    h1{ margin:6px 0 12px 0; font-size:1.6rem; }
+    .meta{ color:var(--muted); margin-bottom:20px; }
+    .hero{
+      background:linear-gradient(90deg, rgba(43,138,110,0.15), rgba(43,138,110,0.05));
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.04);
+      margin-bottom:20px;
+    }
+    section{ margin-bottom:22px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 280px;
+      gap:18px;
+    }
+/* === SIDEBAR LAYOUT === */
+[id] {
+  scroll-margin-top: 120px;
+}
+.case-study-layout {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  flex: 0 0 220px;
+  background: #fff;
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  height: max-content;
+}
+
+/* Sidebar nav links */
+.proj-nav-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.proj-nav-ul li {
+  margin-bottom: 12px;
+}
+
+.proj-nav-ul a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.proj-nav-ul a:hover {
+  color: var(--accent);
+}
+
+ol li{
+  margin-left: 40px;
+}
+.indent{
+  margin-left: 40px;
+}
+/* Main content */
+.case-study-content {
+  flex: 1;
+  max-width: 800px;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.slideshow-container {
+  position: relative;
+  z-index: 10;
+}
+
+.prev, .next {
+  z-index: 20;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Mobile layout */
+@media (max-width: 900px) {
+  .case-study-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+}
+
+@media (max-width:800px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+<div class="case-study-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <nav class="proj-nav">
+      <ul class="proj-nav-ul">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#planning">Planning</a></li>
+        <li><a href="#brainstorming">Brainstorming</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#wireframing">Wireframing</a></li>
+        <li><a href="#prototyping">Prototyping</a></li>
+        <li><a href="#results">Results</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="case-study-content">
+    <a class="back" href="../my-work.html" aria-label="Back to my work">← Back to My Work</a>
+    <h1>Aquinas Study Abroad Website Redesign</h1>
+    <p class="meta">Accessibility, Usability, User Research • 2024 • Role: Researcher &  Designer</p>
+
+    <div class="hero grid" id="overview">
+      <div>
+        <h2>Overview</h2>
+        <p>I contributed to the redesign of a study abroad website by conducting user researcher in order to inform the design of the website.</p>
+      </div>
+      <aside>
+        <h3>Quick facts</h3>
+        <ul>
+          <li>Duration: 1 month</li>
+          <li>Team: 4 people</li>
+          <li>Skills & Tools: UX Research, Usability testing, Wireframing, Prototyping,  
+            Figma, FigJam, Surveying</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section id="planning">
+      <h2>Planning</h2>
+      <p>We started by setting goals for this project. Overall, we had three goals as a team: 
+        <ol>
+          <li> Conduct user research by observing other study-abroad websites and interviewing former/current study-abroad students, as well as sending out surveys. Compile this information into a document that can be used for developing the prototype.</li>
+          <li>Develop a click-through prototype that follows WCAG2 guidelines (contrast, alt-text, readability, etc.) and uses the feedback from our research to lay out the design.</li>
+          <li>Conduct A/B user testing and have users interact with our prototype to see what is and is not working, as well as what can be improved.</li>
+        </ol> <br> We then set individual goals for ourselves. I had two personal goals for this project:
+        <ol>
+          <li>Develop and strengthen my project management skills.</li>
+          <li>Enhance my user research skills.</li>
+        </ol><br>
+        After setting goals for our teams and ourselves, we assigned project roles based on personal preference. My primary roles were User Tester and Visual/Prototype Designer. My secondary role was Presentation Editor. I chose these roles because I thought they could help enhance my skills in user research and UX design.
+
+        Finally, our team set up a shared FigJam file, that would be the central location for all of our project needs. This FigJam held things such as important due dates, our clients expectatations and feedback, and amy important links or files that we may need to revisit.
+      </p>
+    </section>
+    <section id="brainstorming">
+      <h2>Brainstorming</h2>
+      <p>During our brainstorming phase, we met with the client to identify any goals and expectations for this project, afterwards, we conducted a heuristic evaluation as a team and identified some pain points that the website had. From there, we created a list of things we wanted to adress in the redesign. This included things like: <ul class="indent">
+        <li>Adding a “Student stories” section kind of like a blog</li>
+        <li>Embedding the events sections (for info meetings dates, reunion dates, etc. like a calendar for everything)</li>
+        <li>Add an “Apply” or “Advising” section to the nav bar</li>
+        <li>Change the color pallet</li>
+        <li>Including more information and organizing it in a intuative way</li>
+        <li>Adding their social media accounts</li>
+      </ul><br>
+        After identifying the things we wanted to address in the redesign, we then created a timeline for the project: Research, Wireframe, Prototype, User Test, Finalize, Present.
+    </p>
+    </section>
+    <section id="research">
+      <h2>Research</h2>
+      <p>Our first step of researching was surveying past and prospective study abroad students, not just from this program but for all programs. We created a survey of seven questions focused on why a student may study abroad and what they expected from a study abroad website. We aimed for ten to fiften responses for this survey, and we received thirty responses. <br><br>
+      A member of our team also interviewed a past study abroad participant on the same questions from the survey. Below are some of the results from the survey and interview.
+      </p>
+      <br><p>After surveying and interviewing, we researched other study abroad websites to see what they include and how they might appeal to prospective students.</p>
+    </section>
+    <section id="wireframing">
+      <h2>Wireframing</h2>
+      <p>Using the data from the survey and interview, we first created a layout that would address the needs of the users and of our client. After creating a layout, we crafted a style guide for the redesign, utilizing colors from the prevous site and the schools site. We tested all of the colors and fonts froom the studey guide to make sure they complied with the Web Content Accessibility Guidelines 2.0. From there, we constructed our high fidelity wireframe by applying the style guide to the layout. Below  are images of our design system and examples of our wireframe:</p>
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img src="aquinas/styleGuide.png" style="width:100%">
+          <div class="text">Style Guide</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img src="aquinas/home.png" style="width:100%">
+          <div class="text">Home Page Wireframe</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="aquinas/upcomingTrips.png" style="width:100%">
+          <div class="text">Upcoming Trips Page</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img src="aquinas/upcomingTrips2.png" style="width:100%">
+          <div class="text">Upcoming Trips Page cont.</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 6</div>
+          <img src="aquinas/upcomingTrips3.png" style="width:100%">
+          <div class="text">Upcoming Trips Page cont.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 6</div>
+          <img src="aquinas/stories.png" style="width:100%">
+          <div class="text">Student and Faculty stories</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+      <script>let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }</script>
+    </section>
+    <section id="prototyping">
+      <h2>Prototyping</h2>
+      <p>Content for the prototyping section...</p>
+    </section>
+    <section id="results">
+      <h2>Results</h2>
+      <p>Content for the results section...</p>
+    </section>
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="TH logo.png" alt="TreShai Hubbard Logo" class="footer-logo">
+        <p>TreShai Hubbard - Portfolio</p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume-cv.html">Resume</a></li>
+          <li><a href="my-work.html">My Work</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/treshai-hubbard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:hubba209@msu.edu"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© 2025 TreShai Hubbard</p>
+        <p><a href="mailto:hubba209@msu.edu">hubba209@msu.edu</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

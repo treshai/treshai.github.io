@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .logo-section {
     display: flex;
     align-items: center;
@@ -54,6 +55,7 @@
 .body {
     margin: 0;
     font-family: "Albert Sans", sans-serif;
+    background-color: #F0F4F0;
 }
 .headshot h2 {
     font-family: "Aleo", serif;
