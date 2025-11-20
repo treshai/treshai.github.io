@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+  background-color: #F0F4F0;
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 52px;
+  }
+  .website-name{
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+  }
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Albert Sans', sans-serif;
+    background-color: #c0d7bbff;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    position: fixed; /* Make navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+.nav-ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;   
+}
+.nav-ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+.nav-ul a:hover{
+    background-color: rgb(100, 141, 124);
+    color: white; /* Optional: makes text easier to read */
+}
+
+.content {
+    margin-top: 90px; /* adjust to nav height */
+    text-align: center;
+  }
+  .download-button {
+    background-color: #2f4b26ff;
+    color: white;
+    font-family: 'Albert Sans', sans-serif;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+.h1{
+    font-family: "Aleo", serif;
+    font-size: 34px;
+    font-weight: bold; 
+    color: #2f4b26ff;
+}
+.h2{
+    font-family: "Aleo", serif;
+    font-size: 20px;
+    font-weight: 300;   
+}
+.footer {
+    background-color: black;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    font-family: 'Albert Sans', sans-serif;
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #c0d7bbff;
+  }
+  
+  .footer-right a {
+    color: #c0d7bbff;
+    text-decoration: none;
+  }
+  
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
