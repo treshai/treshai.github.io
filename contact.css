@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+    margin: 0;
+    font-family: "Albert Sans", sans-serif;
+    background-color: #F0F4F0;
+    padding-top: 120px;
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 52px;
+  }
+  .website-name{
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+  }
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Albert Sans', sans-serif;
+    background-color: #c0d7bbff;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    position: fixed; /* Make navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+.nav-ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;   
+}
+.nav-ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+.nav-ul a:hover{
+    background-color: rgb(100, 141, 124);
+    color: white; /* Optional: makes text easier to read */
+}
+h2{
+    text-align: center;
+    font-family: "Aleo", serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Hover + focus states */
+form input:focus,
+form textarea:focus {
+    border-color: #648d7c;
+    outline: none;
+
+}
+
+/* Textarea size */
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ---- SUBMIT BUTTON ---- */
+form button {
+    padding: 0.9rem 1rem;
+    background: #648d7c; /* your navbar accent */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #4f6f61;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    font-family: "Albert Sans", sans-serif;
+    margin-bottom: -0.5rem; /* pulls label closer to input */
+}
+@keyframes scroll-up {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }  
+  .footer {
+    background-color: black;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    font-family: 'Albert Sans', sans-serif;
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #c0d7bbff;
+  }
+  
+  .footer-right a {
+    color: #c0d7bbff;
+    text-decoration: none;
+  }
+  
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
