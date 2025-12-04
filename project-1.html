@@ -16,18 +16,19 @@
 <body class="work-page">
   <!-- NAV -->
   <header>
-    <nav class="nav">
+    <nav class ="nav">
       <div class="logo-section">
-        <img src="TH logo.png" alt="TreShai Hubbard Logo" class="logo" />
-        <span class="website-name">TreShai Hubbard - Portfolio</span>
+          <img src="TH logo.png" alt="TreShai Hubbard Logo" class="logo" />
+          <span class="website-name">TreShai Hubbard - Portfolio</span>
       </div>
-      <ul class="nav-ul">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume-cv.html">Resume</a></li>
-        <li><a href="my-work.html">My Work</a></li>
+      <ul class = "nav-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume-cv.html">Resume</a></li>
+          <li><a href="my-work.html">My Work</a></li>
+          <li><a href = contact.html>Contact</a></li>
       </ul>
-    </nav>
+  </nav>
   </header>
   <style>
     :root{
@@ -36,7 +37,7 @@
       --radius:12px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    body{ margin:0; padding:32px; background:#fffaf7; color:#08101a; }
+    body{ margin:0;  background:#fffaf7; color:#08101a; }
     .wrap{ max-width:900px; margin:0 auto; }
     a.back{ display:inline-block; margin-bottom:18px; color:var(--accent); text-decoration:none; font-weight:600; }
     h1{ margin:6px 0 12px 0; font-size:1.6rem; }
@@ -54,43 +55,431 @@
       grid-template-columns: 1fr 280px;
       gap:18px;
     }
-    @media (max-width:800px){
+/* === SIDEBAR LAYOUT === */
+[id] {
+  scroll-margin-top: 120px;
+}
+.case-study-layout {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin-left: 40px;
+  gap: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  flex: 0 0 220px;
+  background: #fff;
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  height: max-content;
+}
+
+/* Sidebar nav links */
+.proj-nav-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.proj-nav-ul li {
+  margin-bottom: 12px;
+}
+
+.proj-nav-ul a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.proj-nav-ul a:hover {
+  color: var(--accent);
+}
+
+ol li{
+  margin-left: 40px;
+}
+.indent{
+  margin-left: 40px;
+}
+/* Main content */
+.case-study-content {
+  flex: 1;
+  max-width: 1000px;
+  padding:32px;
+}
+/* Zoomable image cursor */
+.zoomable {
+  cursor: pointer;
+  transition: transform 0.2s;
+  max-width: 450px;
+  height: auto;
+}
+.zoomable:hover {
+  transform: scale(1.05);
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column; /* stack image and caption vertically */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width:90%;
+  max-height: 90%;
+}
+
+#caption {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prototype-video {
+  width: 25%;       /* makes the video smaller than full screen */
+  max-width: 600px; /* prevents it from getting too wide on large screens */
+  height: auto;     /* maintains aspect ratio */
+  display: block;
+  margin: 20px auto; /* centers the video */
+  border-radius: 12px; /* optional rounded corners to match your style */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.slideshow-container {
+  position: relative;
+  z-index: 10;
+}
+
+.prev, .next {
+  z-index: 20;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* space between images */
+  margin: 20px 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer; /* indicates zoomable */
+  border-radius: 12px; /* optional rounded corners */
+  transition: transform 0.2s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Mobile layout */
+@media (max-width: 900px) {
+  .case-study-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+}
+
+@media (max-width:800px){
       .grid{ grid-template-columns: 1fr; }
     }
   </style>
 
-  <div class="wrap">
-    <a class="back" href="../my-work.html" aria-label="Back to my work">← Back to My Work</a>
-    <h1>Digital Accessibility Guidelines</h1>
-    <p class="meta">Accessibility, Technical Writing • 2024 • Role: Author</p>
+<div class="case-study-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <nav class="proj-nav">
+      <ul class="proj-nav-ul">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#brainstorming">Brainstorming</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#wireframing">Wireframing</a></li>
+        <li><a href="#prototyping">Prototyping</a></li>
+        <li><a href="#results">Results</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <div class="hero grid" role="region" aria-label="Project overview">
+  <!-- MAIN CONTENT -->
+  <main class="case-study-content">
+    <a class="back" href="../my-work.html" aria-label="Back to my work">← Back to My Work</a>
+    <h1>Milestone Manifesto</h1>
+    <p class="meta">UX Design, Usability, User Research • 2025 • Role: Researcher &  Designer</p>
+
+    <div class="hero grid" id="overview">
       <div>
         <h2>Overview</h2>
-        <p>Over the course of my first summer internship, I had the opportunity to conduct accessibility reviews and create resources to help the team stay better informed about accessibility guideliines, one of the resources being a digital accessibility guidelines document.</p>
+        <p>I was tasked with using the game “BINGO” as a framework for designing an app to be used by one or more players on a smartphone device.</p>
       </div>
       <aside>
         <h3>Quick facts</h3>
         <ul>
-          <li>Duration: 6 weeks</li>
+          <li>Duration: 1 month</li>
           <li>Team: Solo</li>
-          <li>Skills & Tools: Adobe Illustrator, Zotero, Microsoft Word</li>
+          <li>Skills & Tools: UX Design, Wireframing, Prototyping,  
+            Figma</li>
         </ul>
       </aside>
     </div>
 
-    <section>
-      <h2>Process</h2>
-      <p>Our office identified a need to enhance the accessibility of our digital communications and resources to ensure they were inclusive and usable for a diverse audience. This meant addressing barriers that might prevent individuals with disabilities from accessing information effectively.</p><br>
-      <p>To support this initiative, I was tasked with developing a comprehensive master document outlining accessibility guidelines for general communications, digital platforms, and social media. The goal was to create a centralized resource that would guide the team in producing accessible and inclusive materials across all channels. These guidelines were designed to strengthen the accessibility of companywide communications, educational platforms, and internal resources while aligning with best practices and compliance standards.</p>
+   
+    <section id="brainstorming">
+      <h2>Brainstorming</h2>
+      <p>During the brainstorming phase, I explored different ways I could complete the task of designing an app based of of the game "BINGO". This included questions like: <ul class="indent">
+        <li>Content ideas: What could the game of Bingo be about? What are possible goals?</li>
+        <li>Use ideas: When and where could Bingo be played? What are the “situations”? </li>
+        <li>Audience: Who could be the audience? Are there specific groups that would benefit from a game?</li>
+        <li>Visuals: What are the traditional and alternative interfaces for Bingo cards?</li>
+      </ul> </p><br>
+    <p>I tracked my ideas and answers in a running document that I could reference throughout the project. Here are a few ideas I had at the beginning of my brainstorming phase: <ul class="indent">
+      <li>Create your own bucket list, a shared one with friends, or use a pre made one.</li>
+      <li>Select a timeline in which to complete this list (1 year, 4 years, etc).</li>
+      <li><strong>Example:</strong> for freshman year of college, a group of friends create a list of things they want
+        to complete before the end of their freshman year, they set the timeline for october-may,
+        share it amongst their friend group, and add pictures from each completed item. </li>
+        <li><strong>Example:</strong> a group of friends graduate and are going all over the country for their post grad plans.
+          each person creates a list of things they want to accomplish in this new phase of life, they all add
+          their boards to a group together, as they upload photos when completing items, their friends get notified. </li>
+    </ul></p><br>
+      <p>After identifying an app concept, I created a concept statement using my ideas from brainstorming. The <strong>concept statement</strong>  was as follows: </p><blockquote><em>"My idea for a bingo board is based off of the concept of bucket lists. Bucket lists started as a list of the experiences or achievements that a person hopes to accomplish during their lifetime, but have become a way to track other experiences or achievements throughout other timelines, suxh as high school or college. My idea is to track these achievements through a bingo board that can be shared with and tracked by friends, to create an interactive bucket list tracker, which features pictures from each experience/achievement upon completion."</em></blockquote>
+    
     </section>
+    <section id="research">
+      <h2>Research</h2>
+      <p>My first step in the research process was creating a user statement, based on insights from brainstorming and informal interviews with college students who had previously created bucket lists to understand what they would want from a bucket list app. I chose to focus on college students as the target audience because I could relate to their perspective. Using these insights, I finalized the <strong>user statement</strong>:</p><blockquote><em>"A group of graduating seniors at MSU have a list of things they want to do/see before graduating in the spring. Their friends also have bucket lists that they want to accomplish. Together they want to individually/collectively document and track these accomplishments in a fun way before graduating."</em></blockquote>
+      <p>A member of our team also interviewed a past study abroad participant on the same questions from the survey. Below are some of the results from the survey and interview.
+      </p>
+      <br><p>After creating the user statement, I created a <strong>user task flow</strong> to visualize each step users would take to complete key tasks within the app.</p>
+      <img src = "../MM task flow.png"  alt="User task flow" class="zoomable" onclick="openModal(this.src, this.alt)"><br>
+      <p>After finishing the task flow, I created a <strong>mood board</strong> to set the overall look and feel of the app. I gathered images and visual inspiration from across the web and pulled them together into a visual theme. From there, I chose a color palette that matched the app's vibe and supported a clear, enjoyable user experience.</p>
+      <img src = "../MM Mood Board.png"  alt="Mood board" class="zoomable" onclick="openModal(this.src, this.alt)"><br>
 
-    <section>
+      <!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+</div>
+    </section>
+    <section id="wireframing">
+      <h2>Wireframing</h2>
+      <p>Before starting the wireframe process, I made <strong>sketches</strong> the user task flow to visualize how users would navigate the app and define the key actions.</p>
+      <img src = "../MM sketches.png"  alt="Sketches" class="zoomable" onclick="openModal(this.src, this.alt)"><br>
+      <p>Next, I created a <strong>medium fidelity wireframe</strong> based on the sketches I made.</p>
+      
+      <div class="slideshow-container">
+ 
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="../Wireframe 1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="../Wireframe 2.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="../Wireframe 3.png" style="width:100%">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+
+      </div><br>
+      <script>let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        function openModal(src, alt) {
+  document.getElementById('modal').style.display = "flex";
+  document.getElementById('modal-img').src = src;
+  document.getElementById('caption').innerText = alt;
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = "none";
+}
+
+        </script>
+      <p>After, I created a <strong>design system</strong> including typefaces, colors, and icons, and applied it to 3 keyframes from my wireframe.</p>
+      <div class="image-grid">
+        <img src="../Design System.png" alt="Design System" class="zoomable" onclick="openModal(this.src, this.alt)">
+        <img src="../Key Frames.png" alt="Key Frames" class="zoomable" onclick="openModal(this.src, this.alt)">
+      </div>
+       <!-- Modal -->
+
+    </section>
+    <section id="prototyping">
+      <h2>Prototyping</h2>
+      <p>Finally, I prototyped my interactive bingo game by building on my medium fidelity wireframe and key frames. I added animations and transitions, following the user flow I created.</p>
+      <p>Here's a video of my working <strong>prototype</strong>:</p>
+  <video class="prototype-video" controls>
+    <source src="../MM Prototype video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    </section>
+    <section id="results">
       <h2>Results</h2>
-      <p>The finalized accessibility guide was shared across the office and became the primary reference for creating accessible content within the office. Team members began incorporating the guidelines into digital communications, social media posts, and educational materials, resulting in more consistent and inclusive practices across platforms. This project helped establish a stronger foundation for accessibility awareness and compliance within the organization.</p>
+      <p>Along with the prototype, I created a poster to summarize my design process. This was such a fun project and I was able to to enhance my UX design and figma skills, while creating a creative app concept and carrying out the design process.</p>
+      <img src = "../Case Study Poster.png"  alt="Milestone Manifesto Poster" class="zoomable" onclick="openModal(this.src, this.alt)"><br>
     </section>
+  </main>
+</div>
 
-  </div>
 <!-- FOOTER -->
 <footer class="footer">
     <div class="footer-container">
@@ -114,7 +503,6 @@
           <a href="mailto:hubba209@msu.edu"><i class="fas fa-envelope"></i></a>
         </div>
         <p>© 2025 TreShai Hubbard</p>
-        <p><a href="mailto:hubba209@msu.edu">hubba209@msu.edu</a></p>
       </div>
     </div>
   </footer>
